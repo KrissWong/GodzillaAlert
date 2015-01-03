@@ -79,8 +79,11 @@
 <li>架構</li>
 </ul>
 <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10885562_1526342084301851_6469185958420065866_n.jpg?oh=3f67165166c4f26de0e575375b26e0cc&oe=5541D9D9&__gda__=1429581280_96703ba28355fe3c9beea655332fd27f" alt="Smiley face">
-
-diagram.drawSVG('diagram', {
+<div id="diagram"></div>
+<script>
+  var diagram = flowchart.parse("the code definition");
+  diagram.drawSVG('diagram');
+  diagram.drawSVG('diagram', {
                               'x': 0,
                               'y': 0,
                               'line-width': 3,
