@@ -1,4 +1,5 @@
 link.info
+<<<<<<< HEAD
 *.pyc
 test.php
 
@@ -7,4 +8,6 @@ data.dat
 
 
 #ignore www folder
+=======
+>>>>>>> bcdca5a47dc4a0a8feadb57f40caf4eca718c1c0
 www/*
