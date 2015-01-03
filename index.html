@@ -79,22 +79,21 @@
 <li>架構</li>
 </ul>
 <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10885562_1526342084301851_6469185958420065866_n.jpg?oh=3f67165166c4f26de0e575375b26e0cc&oe=5541D9D9&__gda__=1429581280_96703ba28355fe3c9beea655332fd27f" alt="Smiley face">
-<div id="diagram"></div>
-<script>
-  var diagram = flowchart.parse("the code definition");
+<div id="diagram">Diagram will be placed here</div>
+<script src="flowchart.js"></script>
+<script> 
+  var diagram = flowchart.parse('st=>start: Start:>http://www.google.com[blank]\n' + 
+                                'e=>end:>http://www.google.com\n' + 
+                                'op1=>operation: My Operation\n' + 
+                                'sub1=>subroutine: My Subroutine\n' + 
+                                'cond=>condition: Yes \n' + 
+                                'or No?\n:>http://www.google.com' + 
+                                'io=>inputoutput|request: catch something...\n' + 
+                                '' +
+                                'st->op1->cond\n' + 
+                                'cond(yes)->io->e\n' + // conditions can also be redirected like cond(yes, bottom) or cond(yes, right)
+                                'cond(no)->sub1(right)->op1');// the other symbols too...
   diagram.drawSVG('diagram');
-  st=>start
-  e=>end
-  op1=>operation: My Operation
-  sub1=>subroutine: My Subroutine
-  cond=>condition: Yes 
-  or No?:>http://www.google.com
-  io=>inputoutput: catch something...
-
-  st->op1->cond
-  cond(yes)->io->e
-  cond(no)->sub1(right)->op1
-</script>
 
 <h3>
 <a id="open-data使用說明" class="anchor" href="#open-data%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Open data使用說明</strong>
