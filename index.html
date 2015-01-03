@@ -14,6 +14,8 @@
     <![endif]-->
 
     <title>Godzillaalert by KrissWong</title>
+    <script src="raphael-min.js">
+    <script src="flowchart-latest.js"></script>
   </head>
 
   <body>
@@ -78,7 +80,43 @@
 </ul>
 <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10885562_1526342084301851_6469185958420065866_n.jpg?oh=3f67165166c4f26de0e575375b26e0cc&oe=5541D9D9&__gda__=1429581280_96703ba28355fe3c9beea655332fd27f" alt="Smiley face">
 
-
+diagram.drawSVG('diagram', {
+                              'x': 0,
+                              'y': 0,
+                              'line-width': 3,
+                              'line-length': 50,
+                              'text-margin': 10,
+                              'font-size': 14,
+                              'font-color': 'black',
+                              'line-color': 'black',
+                              'element-color': 'black',
+                              'fill': 'white',
+                              'yes-text': 'yes',
+                              'no-text': 'no',
+                              'arrow-end': 'block',
+                              // style symbol types
+                              'symbols': {
+                                'start': {
+                                  'font-color': 'red',
+                                  'element-color': 'green',
+                                  'fill': 'yellow'
+                                },
+                                'end':{
+                                  'class': 'end-element'
+                                }
+                              },
+                              // even flowstate support ;-)
+                              'flowstate' : {
+                                'past' : { 'fill' : '#CCCCCC', 'font-size' : 12},
+                                'current' : {'fill' : 'yellow', 'font-color' : 'red', 'font-weight' : 'bold'},
+                                'future' : { 'fill' : '#FFFF99'},
+                                'request' : { 'fill' : 'blue'},
+                                'invalid': {'fill' : '#444444'},
+                                'approved' : { 'fill' : '#58C4A3', 'font-size' : 12, 'yes-text' : 'APPROVED', 'no-text' : 'n/a' },
+                                'rejected' : { 'fill' : '#C45879', 'font-size' : 12, 'yes-text' : 'n/a', 'no-text' : 'REJECTED' }
+                              }
+                            });
+</script>
 
 <h3>
 <a id="open-data使用說明" class="anchor" href="#open-data%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Open data使用說明</strong>
