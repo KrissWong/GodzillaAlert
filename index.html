@@ -77,6 +77,19 @@
 <li>架構</li>
 </ul>
 <img src="https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-xap1/v/t1.0-9/10885562_1526342084301851_6469185958420065866_n.jpg?oh=3f67165166c4f26de0e575375b26e0cc&oe=5541D9D9&__gda__=1429581280_96703ba28355fe3c9beea655332fd27f" alt="Smiley face">
+
+st=>start: Start:>http://www.google.com[blank]
+e=>end:>http://www.google.com
+op1=>operation: My Operation
+sub1=>subroutine: My Subroutine
+cond=>condition: Yes 
+or No?:>http://www.google.com
+io=>inputoutput: catch something...
+
+st->op1->cond
+cond(yes)->io->e
+cond(no)->sub1(right)->op1
+
 <h3>
 <a id="open-data使用說明" class="anchor" href="#open-data%E4%BD%BF%E7%94%A8%E8%AA%AA%E6%98%8E" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Open data使用說明</strong>
 </h3>
